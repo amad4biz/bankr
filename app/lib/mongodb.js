@@ -3,7 +3,7 @@
 var MongoClient = require('mongodb').MongoClient;
 
 module.exports = function(name, cb){
-  var url = 'mongodb://localhost/' + name;
+  var url = 'localhost:27017/' + name;
   MongoClient.connect(url, function(err, db){
     global.mongodb = db;
 
